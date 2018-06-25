@@ -77,7 +77,7 @@ public class Test {
 			int answerIndex;
 			for (int i = 0; i < questions.size(); i++) {
 				answerIndex = i +1;
-			    writer.write("Question " + answerIndex + " Answer:\n" + questions.get(i).getCorrectAnswer());
+			    writer.write("Question " + answerIndex + " Answer:\n" + questions.get(i).getCorrectAnswer() + "\n");
 			    writer.newLine();
 			}
 		    writer.close();
