@@ -10,8 +10,8 @@ public class TestDriver {
 		List<Integer> numberOfQuestions = getNumberOfQuestions(); // Query user for each # of question type
 		setTestQuestions(numberOfQuestions, test1); // Populating test's question list and question details
 		test1.displayTest();
-		test1.generateTest(test1.questions,"test");
-		test1.generateAnswerKey(test1.questions,"answer key");
+		test1.generateTest(test1.questions,"test.txt");
+		test1.generateAnswerKey(test1.questions,"answer key.txt");
 	}
 	
 	public static List<Integer> getNumberOfQuestions() {
