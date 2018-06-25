@@ -13,7 +13,7 @@ public class FillInTheBlankQuestion extends Question {
 	}
 	
 	public String toString() {
-		String space = "";
+		String space = "\n";
 		for (int i = 0; i < this.answerSpace; i++) {
 			space += "\n";
 		}

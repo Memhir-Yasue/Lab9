@@ -42,7 +42,7 @@ public class Test {
 	public void displayTest() {
 		// Create output string with test header
 		String output = "Name:___________________________\nDate:__________\n"
-				+ "Subject:___________________________\n\n\n";
+				+ "Subject:___________________________\n\n";
 		int questionIndex;
 		// Loop through all questions
 		for (int i=0; i < this.questions.size(); i++) {
@@ -74,8 +74,10 @@ public class Test {
 	public void generateAnswerKey(List<Question> questions, String outputFileName) {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
 			writer.write("Test Answer Key\n\n");
+			int answerIndex;
 			for (int i = 0; i < questions.size(); i++) {
-			    writer.write(questions.get(i).getCorrectAnswer());
+				answerIndex = i +1;
+			    writer.write("Question " + answerIndex + " Answer:\n" + questions.get(i).getCorrectAnswer());
 			    writer.newLine();
 			}
 		    writer.close();

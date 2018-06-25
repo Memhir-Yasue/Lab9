@@ -17,13 +17,13 @@ public class TestDriver {
 	public static List<Integer> getNumberOfQuestions() {
 		List<Integer> amountsOfQuestions = new ArrayList<>();
 		int numberOfObjectiveQuestions = 
-				Integer.parseInt(JOptionPane.showInputDialog("Number of Objective Questions?"));
+				Integer.parseInt(JOptionPane.showInputDialog("Number of objective Questions?"));
 		amountsOfQuestions.add(numberOfObjectiveQuestions);
 		int numberOfFillInTheBlankQuestions = 
-				Integer.parseInt(JOptionPane.showInputDialog("Number of Objective Questions?"));
+				Integer.parseInt(JOptionPane.showInputDialog("Number of fill in the blank Questions?"));
 		amountsOfQuestions.add(numberOfFillInTheBlankQuestions);
 		int numberOfMultipleChoiceQuestions = 
-				Integer.parseInt(JOptionPane.showInputDialog("Number of Objective Questions?"));
+				Integer.parseInt(JOptionPane.showInputDialog("Number of multiple choice Questions?"));
 		amountsOfQuestions.add(numberOfMultipleChoiceQuestions);
 		return amountsOfQuestions;
 	}
@@ -80,8 +80,8 @@ public class TestDriver {
 			int fillInTheBlankAnswerSpace = 
 					Integer.parseInt(JOptionPane.showInputDialog("Enter the answer space:"));
 			/* 
-			  Objective Constructor without pointsEarned:
-			  ObjectiveQuestion(String questionText, int pointsPossible, int difficulty, 
+			  Fill in the blank Constructor without pointsEarned:
+			  FillInTheBlankQuestion(String questionText, int pointsPossible, int difficulty, 
 			  		String correctAnswer, int answerSpace)
 			 */ 
 			FillInTheBlankQuestion newQuestion = 
@@ -90,7 +90,7 @@ public class TestDriver {
 							fillInTheBlankAnswerSpace);
 			test.questions.add(newQuestion); // Add question to Test's question list
 		}
-		// 
+		// Add multiple choice questions to test's question list
 		for (int i = 0; i < numberOfQuestions.get(MULTIPLE_CHOICE_INDEX); i++) {
 			// Get all parameters, pass to constructor, add to Test's question List
 			String multipleChoiceQuestionText = JOptionPane.showInputDialog("Enter the question:");
@@ -120,14 +120,14 @@ public class TestDriver {
 				multipleChoicePossibleAnswers.add(multipleChoiceAnswerChoice);
 			}
 			/* 
-			  Objective Constructor without pointsEarned:
-			  ObjectiveQuestion(String questionText, int pointsPossible, int difficulty, 
-			  		String correctAnswer, int answerSpace)
+			  Multiple Choice Constructor without pointsEarned:
+			  MultipleChoiceQuestion(String questionText, int pointsPossible, int difficulty, 
+			  		String correctAnswer, List<String> possibleAnswers)
 			 */ 
 			MultipleChoiceQuestion newQuestion = 
 					new MultipleChoiceQuestion(multipleChoiceQuestionText,multipleChoiceQuestionPointsPossible,
 							multipleChoiceQuestionDifficulty, multipleChoiceCorrectAnswer,multipleChoicePossibleAnswers);
-			test.questions.add(newQuestion); // Add question to Test's question list
+			test.questions.add(newQuestion); // Add question to test's question list
 		}
 		
 	}
