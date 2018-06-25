@@ -27,6 +27,25 @@ public class TestDriver {
 		int numberOfMultipleChoiceQuestions = 
 				Integer.parseInt(JOptionPane.showInputDialog(null, "Number of multiple choice Questions?",
 						"Multiple Choice Questions", JOptionPane.INFORMATION_MESSAGE));
+		// Make sure at least 10 questions created
+		while (numberOfObjectiveQuestions + numberOfFillInTheBlankQuestions +
+				numberOfMultipleChoiceQuestions < 10) {
+			JOptionPane.showMessageDialog(null, "You must enter at least 10 questions.\nPlease choose again",
+					"Minimum of 10 Questions Needed", JOptionPane.INFORMATION_MESSAGE);
+			numberOfObjectiveQuestions = 
+					Integer.parseInt(JOptionPane.showInputDialog(null, "Number of objective Questions?",
+							"Objective Questions", JOptionPane.INFORMATION_MESSAGE));
+			amountsOfQuestions.add(numberOfObjectiveQuestions);
+			numberOfFillInTheBlankQuestions = 
+					Integer.parseInt(JOptionPane.showInputDialog(null, "Number of fill in the blank Questions?",
+							"Fill In the Blank Questions", JOptionPane.INFORMATION_MESSAGE));
+			amountsOfQuestions.add(numberOfFillInTheBlankQuestions);
+			numberOfMultipleChoiceQuestions = 
+					Integer.parseInt(JOptionPane.showInputDialog(null, "Number of multiple choice Questions?",
+							"Multiple Choice Questions", JOptionPane.INFORMATION_MESSAGE));
+		}
+		amountsOfQuestions.add(numberOfObjectiveQuestions);
+		amountsOfQuestions.add(numberOfFillInTheBlankQuestions);
 		amountsOfQuestions.add(numberOfMultipleChoiceQuestions);
 		return amountsOfQuestions;
 	}
