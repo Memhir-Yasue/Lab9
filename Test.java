@@ -56,7 +56,7 @@ public class Test {
 		textArea.setLineWrap(true);  
 		textArea.setWrapStyleWord(true); 
 		scrollPane.setPreferredSize( new Dimension( 750, 750 ) );
-		JOptionPane.showMessageDialog(null, scrollPane, "Test", JOptionPane.OK_OPTION);
+		JOptionPane.showMessageDialog(null, scrollPane, "Test", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public void generateTest(List<Question> questions, String outputFileName) {
