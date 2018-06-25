@@ -6,7 +6,6 @@ public class FillInTheBlankQuestion extends Question {
 			String correctAnswer, int answerSpace) {
 		this.questionText = questionText;
 		this.pointsPossible = pointsPossible;
-		this.pointsEarned = pointsEarned;
 		this.difficulty = difficulty;
 		this.correctAnswer = correctAnswer;
 		this.answerSpace = answerSpace;
