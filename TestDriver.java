@@ -40,28 +40,28 @@ public class TestDriver {
 			questionIndex = i + 1;
 			// Get all parameters, pass to constructor, add to Test's question List
 			String objectiveQuestionText = JOptionPane.showInputDialog(null, "Enter the question:",
-					"Question " + questionIndex + ": Text", JOptionPane.INFORMATION_MESSAGE);
+					"Objective Question " + questionIndex + ": Text", JOptionPane.INFORMATION_MESSAGE);
 			int objectiveQuestionPointsPossible = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the points possible:",
-							"Question " + questionIndex + ": Points Possible",
+							"Objective Question " + questionIndex + ": Points Possible",
 							JOptionPane.INFORMATION_MESSAGE));
 			int objectiveQuestionDifficulty = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the level of difficulty:",
-							"Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
+							"Objective Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
 			// Make sure user input is valid for objectiveQuestionDifficulty
 			while (objectiveQuestionDifficulty < MIN_DIFFICULTY ||
 					objectiveQuestionDifficulty > MAX_DIFFICULTY) {
 				objectiveQuestionDifficulty = 
 						Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter a level of "
 								+ "difficulty between " + MIN_DIFFICULTY + " to " + MAX_DIFFICULTY + ":",
-								"Question " + questionIndex + ": Difficulty",
+								"Objective Question " + questionIndex + ": Difficulty",
 								JOptionPane.INFORMATION_MESSAGE));
 			}
 			String objectiveCorrectAnswer = JOptionPane.showInputDialog(null, "Please enter the correct answer:",
-					"Question " + questionIndex + ": Correct Answer", JOptionPane.INFORMATION_MESSAGE);
+					"Objective Question " + questionIndex + ": Correct Answer", JOptionPane.INFORMATION_MESSAGE);
 			int objectiveAnswerSpace = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the answer space:",
-							"Question " + questionIndex + ": Answer Space", JOptionPane.INFORMATION_MESSAGE));
+							"Objective Question " + questionIndex + ": Answer Space", JOptionPane.INFORMATION_MESSAGE));
 			/* 
 			  Objective Constructor without pointsEarned:
 			  ObjectiveQuestion(String questionText, int pointsPossible, int difficulty, 
@@ -78,21 +78,21 @@ public class TestDriver {
 			questionIndex = i + 1;
 			// Get all parameters, pass to constructor, add to Test's question List
 			String fillInTheBlankQuestionText = JOptionPane.showInputDialog(null, "Enter the question:",
-					"Question " + questionIndex + ": Text", JOptionPane.INFORMATION_MESSAGE);
+					"Fill In The Blank Question " + questionIndex + ": Text", JOptionPane.INFORMATION_MESSAGE);
 			int fillInTheBlankQuestionPointsPossible = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the points possible:",
-							"Question " + questionIndex + ": Points Possible",
+							"Fill In The Blank Question " + questionIndex + ": Points Possible",
 							JOptionPane.INFORMATION_MESSAGE));
 			int fillInTheBlankQuestionDifficulty = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the level of difficulty:",
-							"Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
+							"Fill In The Blank Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
 			// Make sure user input is valid for objectiveQuestionDifficulty
 			while (fillInTheBlankQuestionDifficulty < MIN_DIFFICULTY ||
 					fillInTheBlankQuestionDifficulty > MAX_DIFFICULTY) {
 				fillInTheBlankQuestionDifficulty = 
 						Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter a level of "
 								+ "difficulty between " + MIN_DIFFICULTY + " to " + MAX_DIFFICULTY + ":",
-								"Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
+								"Fill In The Blank Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
 			}
 			String fillInTheBlankCorrectAnswer = 
 					JOptionPane.showInputDialog("Please enter the correct answer:");
@@ -114,29 +114,29 @@ public class TestDriver {
 			questionIndex = i + 1;
 			// Get all parameters, pass to constructor, add to Test's question List
 			String multipleChoiceQuestionText = JOptionPane.showInputDialog(null, "Enter the question:",
-					"Question " + questionIndex + ": Text", JOptionPane.INFORMATION_MESSAGE);
+					"Multiple Choice Question " + questionIndex + ": Text", JOptionPane.INFORMATION_MESSAGE);
 			int multipleChoiceQuestionPointsPossible = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the points possible:",
-							"Question " + questionIndex + ": Points Possible",
+							"Multiple Choice Question " + questionIndex + ": Points Possible",
 							JOptionPane.INFORMATION_MESSAGE));
 			int multipleChoiceQuestionDifficulty = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the level of difficulty:",
-							"Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
+							"Multiple Choice Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
 			// Make sure user input is valid for objectiveQuestionDifficulty
 			while (multipleChoiceQuestionDifficulty < MIN_DIFFICULTY ||
 					multipleChoiceQuestionDifficulty > MAX_DIFFICULTY) {
 				multipleChoiceQuestionDifficulty = 
 						Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter a level of "
 								+ "difficulty between " + MIN_DIFFICULTY + " to " + MAX_DIFFICULTY + ":",
-								"Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
+								"Multiple Choice Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
 			}
 			String multipleChoiceCorrectAnswer = 
 					JOptionPane.showInputDialog(null, "Please enter the correct answer:",
-							"Question " + questionIndex + ": Correct Answer", JOptionPane.INFORMATION_MESSAGE);
+							"Multiple Choice Question " + questionIndex + ": Correct Answer", JOptionPane.INFORMATION_MESSAGE);
 			// Get number of possible answers for question
 			int numberOfPossibleAnswers = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the amount of possible answers:",
-							"Question " + questionIndex + ": Number of Possible Answers",
+							"Multiple Choice Question " + questionIndex + ": Number of Possible Answers",
 							JOptionPane.INFORMATION_MESSAGE));
 			// Initialize list of possible answers and answer number for user input in inputDialog.
 			List<String> multipleChoicePossibleAnswers = new ArrayList<String>();
@@ -145,7 +145,7 @@ public class TestDriver {
 				answerChoiceNumber = j + 1;
 				String multipleChoiceAnswerChoice = 
 						JOptionPane.showInputDialog(null, "Please enter answer choice " + answerChoiceNumber + ":",
-								"Question " + questionIndex + ": Answer Choice: " + answerChoiceNumber,
+								"Multiple Choice Question " + questionIndex + ": Answer Choice: " + answerChoiceNumber,
 								JOptionPane.INFORMATION_MESSAGE);
 				multipleChoicePossibleAnswers.add(multipleChoiceAnswerChoice);
 			}
