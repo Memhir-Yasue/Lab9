@@ -64,28 +64,28 @@ public class TestDriver {
 			questionIndex = i + 1;
 			// Get all parameters, pass to constructor, add to Test's question List
 			String objectiveQuestionText = JOptionPane.showInputDialog(null, "Enter the question:",
-					"Objective Question " + questionIndex + ": Text", JOptionPane.INFORMATION_MESSAGE);
+					"Objective Question " + questionIndex, JOptionPane.INFORMATION_MESSAGE);
 			int objectiveQuestionPointsPossible = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the points possible:",
-							"Objective Question " + questionIndex + ": Points Possible",
+							"Objective Question " + questionIndex,
 							JOptionPane.INFORMATION_MESSAGE));
 			int objectiveQuestionDifficulty = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the level of difficulty:",
-							"Objective Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
+							"Objective Question " + questionIndex, JOptionPane.INFORMATION_MESSAGE));
 			// Make sure user input is valid for objectiveQuestionDifficulty
 			while (objectiveQuestionDifficulty < MIN_DIFFICULTY ||
 					objectiveQuestionDifficulty > MAX_DIFFICULTY) {
 				objectiveQuestionDifficulty = 
 						Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter a level of "
 								+ "difficulty between " + MIN_DIFFICULTY + " to " + MAX_DIFFICULTY + ":",
-								"Objective Question " + questionIndex + ": Difficulty",
+								"Objective Question " + questionIndex,
 								JOptionPane.INFORMATION_MESSAGE));
 			}
 			String objectiveCorrectAnswer = JOptionPane.showInputDialog(null, "Please enter the correct answer:",
 					"Objective Question " + questionIndex + ": Correct Answer", JOptionPane.INFORMATION_MESSAGE);
 			int objectiveAnswerSpace = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the answer space:",
-							"Objective Question " + questionIndex + ": Answer Space", JOptionPane.INFORMATION_MESSAGE));
+							"Objective Question " + questionIndex, JOptionPane.INFORMATION_MESSAGE));
 			/* 
 			  Objective Constructor without pointsEarned:
 			  ObjectiveQuestion(String questionText, int pointsPossible, int difficulty, 

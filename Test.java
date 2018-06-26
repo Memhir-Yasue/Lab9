@@ -61,10 +61,16 @@ public class Test {
 	
 	public void generateTest(List<Question> questions, String outputFileName) {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
-			writer.write("Name:\nDate:\nSubject:\n\n\n");
-			for (int i = 0; i < questions.size(); i++) {
-			    writer.write(questions.toString());
+			String output = "Name:___________________________\nDate:__________\n"
+					+ "Subject:___________________________\n\n";
+			int questionIndex;
+			// Loop through all questions
+			for (int i=0; i < this.questions.size(); i++) {
+				questionIndex = i + 1; // For output string
+				// Append each question to end of string
+				output += "Question " + questionIndex + ". " + this.questions.get(i).toString();
 			}
+			writer.write(output);
 		    writer.close();
 		} catch (IOException e) {
 		    System.err.println("Error writing test file.");
