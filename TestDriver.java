@@ -67,8 +67,7 @@ public class TestDriver {
 					"Objective Question " + questionIndex, JOptionPane.INFORMATION_MESSAGE);
 			int objectiveQuestionPointsPossible = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the points possible:",
-							"Objective Question " + questionIndex,
-							JOptionPane.INFORMATION_MESSAGE));
+							"Objective Question " + questionIndex, JOptionPane.INFORMATION_MESSAGE));
 			int objectiveQuestionDifficulty = 
 					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the level of difficulty:",
 							"Objective Question " + questionIndex, JOptionPane.INFORMATION_MESSAGE));
@@ -119,9 +118,11 @@ public class TestDriver {
 								"Fill In The Blank Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
 			}
 			String fillInTheBlankCorrectAnswer = 
-					JOptionPane.showInputDialog("Please enter the correct answer:");
+					JOptionPane.showInputDialog(null, "Please enter the correct answer:",
+							"Fill In The Blank Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE);
 			int fillInTheBlankAnswerSpace = 
-					Integer.parseInt(JOptionPane.showInputDialog("Enter the answer space:"));
+					Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the answer space:",
+							"Fill In The Blank Question " + questionIndex + ": Difficulty", JOptionPane.INFORMATION_MESSAGE));
 			/* 
 			  Fill in the blank Constructor without pointsEarned:
 			  FillInTheBlankQuestion(String questionText, int pointsPossible, int difficulty, 
